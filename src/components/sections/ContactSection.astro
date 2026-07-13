@@ -1,0 +1,227 @@
+---
+// Contact Section — form + WhatsApp CTA + hours + payments
+import '../../styles/contact.css';
+---
+<section id="contact" class="contact section" aria-label="Contacto">
+  <div class="container">
+
+    <div class="contact-header" data-reveal>
+      <span class="section-label" id="contact-label">Contacto</span>
+    </div>
+
+    <div class="contact-inner">
+
+      <!-- Left: Info card -->
+      <div class="contact-info" data-reveal="left" data-delay="100">
+        <h2 class="text-headline contact-title" id="contact-title">Hablemos</h2>
+
+        <div class="contact-details">
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/541126629328"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp contact-wa-btn"
+            id="contact-cta"
+            aria-label="Contactar por WhatsApp"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span id="contact-cta-text">Contactar por WhatsApp</span>
+          </a>
+
+          <!-- Hours -->
+          <div class="contact-meta-block">
+            <div class="contact-meta-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <p class="text-body contact-meta-text" id="contact-subtitle">
+              Estoy disponible de lunes a viernes, de 9 a 20 hs.
+            </p>
+          </div>
+
+          <!-- Payments -->
+          <div class="contact-meta-block">
+            <div class="contact-meta-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <p class="text-body contact-meta-text" id="contact-payments">
+              Pagos: Wise, PayPal y transferencia bancaria.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-wrap" data-reveal="right" data-delay="200">
+        <form
+          class="contact-form"
+          id="contact-form"
+          novalidate
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-name" id="label-name">Nombre</label>
+              <input
+                class="form-input"
+                type="text"
+                id="form-name"
+                name="name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-email" id="label-email">Correo electrónico</label>
+              <input
+                class="form-input"
+                type="email"
+                id="form-email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-location" id="label-location">Lugar de residencia</label>
+            <input
+              class="form-input"
+              type="text"
+              id="form-location"
+              name="location"
+              autocomplete="country-name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-reason" id="label-reason">Motivo de consulta</label>
+            <textarea
+              class="form-input form-textarea"
+              id="form-reason"
+              name="reason"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary form-submit-btn" id="form-submit-btn">
+              <span id="form-submit-text">Enviar mensaje</span>
+            </button>
+          </div>
+
+          <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  import { getLang, t } from '../../i18n/index';
+  import type { Lang } from '../../i18n/index';
+
+  const update = (lang: Lang) => {
+    const tr = t(lang);
+    const c  = tr.contact;
+
+    const ids: Record<string, string> = {
+      'contact-label':    c.section_label,
+      'contact-title':    c.title,
+      'contact-subtitle': c.subtitle,
+      'contact-payments': c.payments,
+      'contact-cta-text': c.whatsapp,
+      'label-name':       c.form_name,
+      'label-email':      c.form_email,
+      'label-reason':     c.form_reason,
+      'label-location':   c.form_location,
+      'form-submit-text': c.form_submit,
+    };
+    Object.entries(ids).forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    });
+
+    // Update placeholders
+    const nameInput     = document.getElementById('form-name')     as HTMLInputElement | null;
+    const emailInput    = document.getElementById('form-email')    as HTMLInputElement | null;
+    const locationInput = document.getElementById('form-location') as HTMLInputElement | null;
+    const reasonInput   = document.getElementById('form-reason')   as HTMLTextAreaElement | null;
+    if (nameInput)     nameInput.placeholder     = c.form_name;
+    if (emailInput)    emailInput.placeholder    = c.form_email;
+    if (locationInput) locationInput.placeholder = c.form_location;
+    if (reasonInput)   reasonInput.placeholder   = c.form_reason;
+
+    const cta = document.getElementById('contact-cta');
+    if (cta) cta.setAttribute('aria-label', c.whatsapp);
+  };
+
+  // Form submission handler — sends to WhatsApp as fallback
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const lang = getLang();
+      const tr   = t(lang);
+      const btn  = document.getElementById('form-submit-btn') as HTMLButtonElement | null;
+      const txt  = document.getElementById('form-submit-text');
+      const fb   = document.getElementById('form-feedback');
+
+      if (btn)  btn.disabled = true;
+      if (txt)  txt.textContent = tr.contact.form_sending;
+
+      const data = new FormData(form);
+      const name     = (data.get('name')     as string).trim();
+      const email    = (data.get('email')    as string).trim();
+      const location = (data.get('location') as string).trim();
+      const reason   = (data.get('reason')   as string).trim();
+
+      // Build WhatsApp message as fallback
+      const message = encodeURIComponent(
+        `Nombre: ${name}\nCorreo: ${email}\nResidencia: ${location}\nMotivo: ${reason}`
+      );
+
+      // Try FormSubmit (no backend needed)
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/rominacterapia@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name, email, location, reason, _subject: 'Nuevo contacto desde webromi' }),
+        });
+        if (res.ok) {
+          if (fb) {
+            fb.textContent = tr.contact.form_success;
+            fb.className = 'form-feedback form-feedback--success';
+          }
+          form.reset();
+        } else {
+          throw new Error('Form failed');
+        }
+      } catch {
+        // Fallback: open WhatsApp
+        window.open(`https://wa.me/541126629328?text=${message}`, '_blank');
+        if (fb) {
+          fb.textContent = tr.contact.form_error;
+          fb.className = 'form-feedback form-feedback--error';
+        }
+      } finally {
+        if (btn)  btn.disabled = false;
+        if (txt)  txt.textContent = tr.contact.form_submit;
+      }
+    });
+  }
+
+  update(getLang());
+  window.addEventListener('langchange', (e) => update((e as CustomEvent).detail));
+</script>

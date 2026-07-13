@@ -1,0 +1,80 @@
+{
+  "lang": "es",
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "cta": "Contactar"
+  },
+  "hero": {
+    "headline": "Ante una pérdida o una migración, el mundo parece más frío y hostil.",
+    "subheadline": "Apoyo emocional y psicológico para acompañarte en la recuperación de la calma y la resiliencia.",
+    "intro": "Soy Romina Méndez, psicoterapeuta con más de 10 años de experiencia clínica. Brindo psicoterapia en tu idioma: español, inglés o italiano.",
+    "cta": "Contactar",
+    "cta_aria": "Contactar por WhatsApp"
+  },
+  "empathy": {
+    "text": "La valentía de atravesar una migración y la tristeza de reconocer una pérdida no implican pasar por alto la propia vulnerabilidad.",
+    "text2": "Ser fuerte no es poder con todo ni sentir menos tus emociones.",
+    "about_link": "Sobre mí →"
+  },
+  "about": {
+    "section_label": "Sobre mí",
+    "title": "Mi camino",
+    "bio_1": "Vivo lejos de mi ciudad natal desde 2006 y conozco en primera persona la experiencia de extrañar personas queridas, lugares y formas de ser y estar en el mundo.",
+    "bio_2": "Migrar transforma la identidad; hay una pérdida cotidiana, difícil de delimitar.",
+    "bio_3": "Desde la terapia de Aceptación y Compromiso (ACT), te acompaño a explorar tu experiencia actual de duelo y/o de migración. Construir una vida que sientas significativa y valiosa es posible más allá del sufrimiento y el dolor.",
+    "bio_4": "Incorporo técnicas de terapia cognitivo-conductual y sistémica, que te permiten identificar patrones de comportamiento disfuncionales. Se facilita así la toma de decisiones que generan cambios.",
+    "credentials_title": "Mi camino profesional",
+    "credentials_subtitle": "Formación rigurosa y especialización internacional para ofrecerte un apoyo clínico de alta calidad.",
+    "credentials": [
+      "Licenciatura en Psicología | Universidad de Buenos Aires (UBA).",
+      "Residencia Básica en Psicología Clínica | Ministerio de Salud de la Provincia de Buenos Aires.",
+      "Residencia Posbásica en Gerontología | Gobierno de la Ciudad de Buenos Aires.",
+      "Especialista en Psicología Clínica | Ministerio de Salud de la Nación.",
+      "Especialista en Psicología Sistémica | Escuela Sistémica Argentina (ESA).",
+      "Especialista en Terapias Contextuales y de Tercera Generación | Universidad de Almería, España.",
+      "Máster en Dirección y Gestión de Recursos Humanos | Universidad Internacional de La Rioja (UNIR), España."
+    ]
+  },
+  "services": {
+    "section_label": "Servicios",
+    "title": "Atención online, sin barreras geográficas, adaptada a tu zona horaria.",
+    "subtitle": "Disponible en inglés, español e italiano.",
+    "individual_title": "Terapia Individual",
+    "individual_desc": "Comienza a transformar el vínculo con tu dolor y a recuperar sentido de valor en tu vida.",
+    "individual_duration": "Videollamada de 50 minutos. Semanal y/o quincenal.",
+    "individual_price": "55 USD",
+    "couple_title": "Terapia de Pareja",
+    "couple_desc": "Reconstruye el vínculo en momentos de cambio, desde la compasión y reciprocidad.",
+    "couple_duration": "Videollamada de 60 minutos. Semanal y/o quincenal.",
+    "couple_price": "75 USD",
+    "workshop_title": "Talleres Área Laboral",
+    "workshop_desc_leaders": "Líderes: Facilita el bienestar laboral si lideras un equipo, con un espacio para comprender mejor las emociones y la gestión del estrés laboral.",
+    "workshop_desc_professionals": "Profesionales: Si buscas un cambio profesional, adquiere nuevas competencias en búsqueda laboral a través de LinkedIn.",
+    "workshop_duration": "Videollamada grupal de 90 minutos.",
+    "workshop_price": "25 USD por persona",
+    "duration_label": "Duración",
+    "price_label": "Valor"
+  },
+  "contact": {
+    "section_label": "Contacto",
+    "title": "Hablemos",
+    "subtitle": "Estoy disponible de lunes a viernes, de 9 a 20 hs.",
+    "payments": "Pagos: Wise, PayPal y transferencia bancaria.",
+    "whatsapp": "Contactar por WhatsApp",
+    "form_name": "Nombre",
+    "form_email": "Correo electrónico",
+    "form_reason": "Motivo de consulta",
+    "form_location": "Lugar de residencia",
+    "form_submit": "Enviar mensaje",
+    "form_sending": "Enviando...",
+    "form_success": "¡Mensaje enviado! Te responderé pronto.",
+    "form_error": "Hubo un error. Por favor, contactame por WhatsApp."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Psicoterapia online · Migración y Duelos"
+  }
+}

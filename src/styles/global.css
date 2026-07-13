@@ -1,0 +1,285 @@
+/* ============================================================
+   GLOBAL CSS — Romina Méndez · Psicoterapia Online
+   Sistema de diseño: minimalista, elegante, cálido
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── Variables ───────────────────────────────────────────── */
+:root {
+  /* Colors */
+  --color-bg:          #F8F6F2;
+  --color-bg-alt:      #F0EDE7;
+  --color-bg-dark:     #1E1E1C;
+  --color-ink:         #1E1E1C;
+  --color-muted:       #6B6B68;
+  --color-accent:      #7B8E6F;   /* sage green */
+  --color-accent-warm: #B07B5A;   /* terracotta */
+  --color-border:      #E2DDD5;
+  --color-border-soft: #EAE6DF;
+  --color-white:       #FFFFFF;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* Layout */
+  --container-max: 1100px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration: 400ms;
+}
+
+/* ── Reset & Base ────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+.font-serif { font-family: var(--font-serif); }
+.font-sans  { font-family: var(--font-sans); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.text-display {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.text-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.text-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.text-body {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.text-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.text-accent { color: var(--color-accent); }
+.text-warm   { color: var(--color-accent-warm); }
+.text-muted  { color: var(--color-muted); }
+.text-white  { color: var(--color-white); }
+
+.italic { font-style: italic; }
+
+/* ── Layout ──────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--space-3xl);
+}
+
+.section-sm {
+  padding-block: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .section    { padding-block: var(--space-2xl); }
+  .section-sm { padding-block: var(--space-xl); }
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 0;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all var(--duration) var(--ease-out);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+.btn-primary:hover {
+  background-color: #6a7b5e;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(123, 142, 111, 0.25);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
+}
+.btn-outline:hover {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: var(--color-white);
+  gap: 0.625rem;
+}
+.btn-whatsapp:hover {
+  background-color: #1fb855;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+}
+
+.btn-ghost {
+  color: var(--color-accent);
+  padding-inline: 0;
+  gap: 0.375rem;
+}
+.btn-ghost:hover {
+  gap: 0.625rem;
+}
+
+/* ── Section Label ───────────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-accent);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--color-accent);
+}
+
+/* ── Divider ─────────────────────────────────────────────── */
+.divider {
+  width: 3rem;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+/* ── Reveal animations ───────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal="left"] {
+  transform: translateX(-24px);
+}
+[data-reveal="left"].is-visible {
+  transform: translateX(0);
+}
+[data-reveal="right"] {
+  transform: translateX(24px);
+}
+[data-reveal="right"].is-visible {
+  transform: translateX(0);
+}
+
+/* Stagger delays */
+[data-delay="100"] { transition-delay: 100ms; }
+[data-delay="200"] { transition-delay: 200ms; }
+[data-delay="300"] { transition-delay: 300ms; }
+[data-delay="400"] { transition-delay: 400ms; }
+[data-delay="500"] { transition-delay: 500ms; }
+
+/* ── Utilities ───────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.no-scroll { overflow: hidden; }

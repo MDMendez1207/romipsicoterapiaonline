@@ -1,0 +1,80 @@
+{
+  "lang": "en",
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Contact"
+  },
+  "hero": {
+    "headline": "Facing loss or migration, the world can feel colder and more hostile.",
+    "subheadline": "Emotional and psychological support to help you recover calm and resilience.",
+    "intro": "I'm Romina Méndez, a psychotherapist with over 10 years of clinical experience. I provide psychotherapy in your language: Spanish, English, or Italian.",
+    "cta": "Contact",
+    "cta_aria": "Contact via WhatsApp"
+  },
+  "empathy": {
+    "text": "The courage it takes to go through migration and the sadness of acknowledging a loss don't mean overlooking your own vulnerability.",
+    "text2": "Being strong doesn't mean handling everything alone or feeling less.",
+    "about_link": "About me →"
+  },
+  "about": {
+    "section_label": "About me",
+    "title": "My journey",
+    "bio_1": "I have been living far from my hometown since 2006 and I know firsthand the experience of missing loved ones, places, and ways of being in the world.",
+    "bio_2": "Migration transforms identity; there is a daily, hard-to-define loss.",
+    "bio_3": "Through Acceptance and Commitment Therapy (ACT), I accompany you in exploring your current experience of grief and/or migration. Building a life that feels meaningful and valuable is possible beyond suffering and pain.",
+    "bio_4": "I incorporate cognitive-behavioral and systemic therapy techniques that help you identify dysfunctional behavioral patterns and facilitate decision-making that generates real change.",
+    "credentials_title": "My professional journey",
+    "credentials_subtitle": "Rigorous training and international specialization to offer you high-quality clinical support.",
+    "credentials": [
+      "B.S. in Psychology | University of Buenos Aires (UBA).",
+      "Clinical Psychology Residency | Ministry of Health, Province of Buenos Aires.",
+      "Advanced Residency in Gerontology | Government of the City of Buenos Aires.",
+      "Certified Clinical Psychology Specialist | National Ministry of Health, Argentina.",
+      "Specialist in Systemic Psychology | Argentine Systemic School (ESA).",
+      "Specialist in Contextual & Third-Generation Therapies | University of Almería, Spain.",
+      "Master's Degree in Human Resources Management | International University of La Rioja (UNIR), Spain."
+    ]
+  },
+  "services": {
+    "section_label": "Services",
+    "title": "Online care, without geographical barriers, adapted to your time zone.",
+    "subtitle": "Available in English, Spanish, and Italian.",
+    "individual_title": "Individual Therapy",
+    "individual_desc": "Begin transforming your relationship with pain and rediscover a sense of value in your life.",
+    "individual_duration": "50-minute video call. Weekly and/or biweekly.",
+    "individual_price": "55 USD",
+    "couple_title": "Couple Therapy",
+    "couple_desc": "Rebuild connection during times of change, from a place of compassion and reciprocity.",
+    "couple_duration": "60-minute video call. Weekly and/or biweekly.",
+    "couple_price": "75 USD",
+    "workshop_title": "Workplace Workshops",
+    "workshop_desc_leaders": "Leaders: Support your team's wellbeing by developing a deeper understanding of emotions and workplace stress management.",
+    "workshop_desc_professionals": "Professionals: If you're looking for a career change, build new skills in job searching through LinkedIn.",
+    "workshop_duration": "90-minute group video call.",
+    "workshop_price": "25 USD per person",
+    "duration_label": "Duration",
+    "price_label": "Rate"
+  },
+  "contact": {
+    "section_label": "Contact",
+    "title": "Let's talk",
+    "subtitle": "Available Monday to Friday, 9 am to 8 pm.",
+    "payments": "Payments: Wise, PayPal, and bank transfer.",
+    "whatsapp": "Contact via WhatsApp",
+    "form_name": "Name",
+    "form_email": "Email address",
+    "form_reason": "Reason for consultation",
+    "form_location": "Place of residence",
+    "form_submit": "Send message",
+    "form_sending": "Sending...",
+    "form_success": "Message sent! I'll get back to you soon.",
+    "form_error": "An error occurred. Please contact me via WhatsApp."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Online Psychotherapy · Migration & Grief"
+  }
+}

@@ -1,0 +1,153 @@
+---
+// Services Section — fully i18n, real content from directives
+import '../../styles/services.css';
+---
+<section id="services" class="services section" aria-label="Servicios">
+  <div class="container">
+
+    <div class="services-header" data-reveal>
+      <span class="section-label" id="services-label">Servicios</span>
+    </div>
+
+    <div class="services-intro" data-reveal data-delay="100">
+      <p class="services-intro-text" id="services-title">
+        Atención online, sin barreras geográficas, adaptada a tu zona horaria.
+      </p>
+      <p class="services-intro-sub text-body" id="services-subtitle">
+        Disponible en inglés, español e italiano.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Individual Therapy -->
+      <article class="service-card" data-reveal data-delay="100">
+        <div class="service-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <div class="service-card-body">
+          <h3 class="service-card-title text-title" id="services-individual-title">Terapia Individual</h3>
+          <p class="service-card-desc text-body" id="services-individual-desc">
+            Comienza a transformar el vínculo con tu dolor y a recuperar sentido de valor en tu vida.
+          </p>
+          <div class="service-card-meta">
+            <div class="service-meta-item">
+              <span class="service-meta-label" id="services-duration-label">Duración</span>
+              <span class="service-meta-value" id="services-individual-duration">Videollamada de 50 minutos. Semanal y/o quincenal.</span>
+            </div>
+            <div class="service-meta-item">
+              <span class="service-meta-label" id="services-price-label">Valor</span>
+              <span class="service-price" id="services-individual-price">55 USD</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Couple Therapy -->
+      <article class="service-card" data-reveal data-delay="200">
+        <div class="service-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="8" r="3.5"/>
+            <circle cx="16" cy="8" r="3.5"/>
+            <path d="M1 20c0-3.5 3.1-6 7-6"/>
+            <path d="M23 20c0-3.5-3.1-6-7-6"/>
+            <path d="M8 14c0 0 1.5 1 4 1s4-1 4-1"/>
+          </svg>
+        </div>
+        <div class="service-card-body">
+          <h3 class="service-card-title text-title" id="services-couple-title">Terapia de Pareja</h3>
+          <p class="service-card-desc text-body" id="services-couple-desc">
+            Reconstruye el vínculo en momentos de cambio, desde la compasión y reciprocidad.
+          </p>
+          <div class="service-card-meta">
+            <div class="service-meta-item">
+              <span class="service-meta-label">Duración</span>
+              <span class="service-meta-value" id="services-couple-duration">Videollamada de 60 minutos. Semanal y/o quincenal.</span>
+            </div>
+            <div class="service-meta-item">
+              <span class="service-meta-label">Valor</span>
+              <span class="service-price" id="services-couple-price">75 USD</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Workshops -->
+      <article class="service-card service-card--wide" data-reveal data-delay="300">
+        <div class="service-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/>
+            <line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <div class="service-card-body">
+          <h3 class="service-card-title text-title" id="services-workshop-title">Talleres Área Laboral</h3>
+          <div class="workshop-descs">
+            <p class="service-card-desc text-body" id="services-workshop-desc-leaders">
+              Líderes: Facilita el bienestar laboral si lideras un equipo, con un espacio para comprender mejor las emociones y la gestión del estrés laboral.
+            </p>
+            <p class="service-card-desc text-body" id="services-workshop-desc-professionals">
+              Profesionales: Si buscas un cambio profesional, adquiere nuevas competencias en búsqueda laboral a través de LinkedIn.
+            </p>
+          </div>
+          <div class="service-card-meta">
+            <div class="service-meta-item">
+              <span class="service-meta-label">Duración</span>
+              <span class="service-meta-value" id="services-workshop-duration">Videollamada grupal de 90 minutos.</span>
+            </div>
+            <div class="service-meta-item">
+              <span class="service-meta-label">Valor</span>
+              <span class="service-price" id="services-workshop-price">25 USD por persona</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /services-grid -->
+  </div>
+</section>
+
+
+
+<script>
+  import { getLang, t } from '../../i18n/index';
+  import type { Lang } from '../../i18n/index';
+
+  const update = (lang: Lang) => {
+    const tr = t(lang);
+    const s  = tr.services;
+
+    const ids: Record<string, string> = {
+      'services-label':                    s.section_label,
+      'services-title':                    s.title,
+      'services-subtitle':                 s.subtitle,
+      'services-individual-title':         s.individual_title,
+      'services-individual-desc':          s.individual_desc,
+      'services-individual-duration':      s.individual_duration,
+      'services-individual-price':         s.individual_price,
+      'services-couple-title':             s.couple_title,
+      'services-couple-desc':              s.couple_desc,
+      'services-couple-duration':          s.couple_duration,
+      'services-couple-price':             s.couple_price,
+      'services-workshop-title':           s.workshop_title,
+      'services-workshop-desc-leaders':    s.workshop_desc_leaders,
+      'services-workshop-desc-professionals': s.workshop_desc_professionals,
+      'services-workshop-duration':        s.workshop_duration,
+      'services-workshop-price':           s.workshop_price,
+      'services-duration-label':           s.duration_label,
+      'services-price-label':              s.price_label,
+    };
+    Object.entries(ids).forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    });
+  };
+
+  update(getLang());
+  window.addEventListener('langchange', (e) => update((e as CustomEvent).detail));
+</script>

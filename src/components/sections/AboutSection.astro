@@ -1,0 +1,97 @@
+---
+// About Section — bio + photo
+import '../../styles/about.css';
+---
+<section id="about" class="about section" aria-label="Sobre mí">
+  <div class="container">
+    <div class="about-header" data-reveal>
+      <span class="section-label" id="about-label">Sobre mí</span>
+    </div>
+
+    <div class="about-inner">
+      <!-- Profile image -->
+      <div class="about-image-col" data-reveal="left" data-delay="100">
+        <div class="about-image-wrap">
+          <div class="about-image-bg" aria-hidden="true"></div>
+          <div class="about-image-frame">
+            <img
+              src="/profile-picture.png"
+              alt="Romina Méndez — Psicoterapeuta"
+              loading="lazy"
+              decoding="async"
+              width="480"
+              height="640"
+              class="about-photo"
+            />
+          </div>
+          <div class="about-badge" aria-hidden="true">
+            <svg viewBox="0 0 100 100" class="badge-svg">
+              <path id="badgePath" d="M 50,50 m -35,0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
+              <text font-size="10.5" font-weight="600" letter-spacing="2.5" fill="currentColor">
+                <textPath href="#badgePath" startOffset="0%" id="badge-text">
+                  PSICOTERAPIA ONLINE •
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio content -->
+      <div class="about-content" data-reveal="right" data-delay="200">
+        <h2 class="text-title about-title" id="about-title">Mi camino</h2>
+
+        <div class="about-bio">
+          <p class="text-body" id="about-bio-1">
+            Vivo lejos de mi ciudad natal desde 2006 y conozco en primera persona la experiencia de extrañar personas queridas, lugares y formas de ser y estar en el mundo.
+          </p>
+          <p class="text-body" id="about-bio-2">
+            Migrar transforma la identidad; hay una pérdida cotidiana, difícil de delimitar.
+          </p>
+          <p class="text-body" id="about-bio-3">
+            Desde la terapia de Aceptación y Compromiso (ACT), te acompaño a explorar tu experiencia actual de duelo y/o de migración. Construir una vida que sientas significativa y valiosa es posible más allá del sufrimiento y el dolor.
+          </p>
+          <p class="text-body" id="about-bio-4">
+            Incorporo técnicas de terapia cognitivo-conductual y sistémica, que te permiten identificar patrones de comportamiento disfuncionales. Se facilita así la toma de decisiones que generan cambios.
+          </p>
+        </div>
+
+        <div class="about-tags">
+          <span class="approach-tag">ACT</span>
+          <span class="approach-tag">TCC</span>
+          <span class="approach-tag">Terapia Sistémica</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  import { getLang, t } from '../../i18n/index';
+  import type { Lang } from '../../i18n/index';
+
+  const updateAbout = (lang: Lang) => {
+    const tr = t(lang);
+    const ids: Record<string, string> = {
+      'about-label': tr.about.section_label,
+      'about-title': tr.about.title,
+      'about-bio-1': tr.about.bio_1,
+      'about-bio-2': tr.about.bio_2,
+      'about-bio-3': tr.about.bio_3,
+      'about-bio-4': tr.about.bio_4,
+    };
+    Object.entries(ids).forEach(([id, value]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    });
+    const badge = document.getElementById('badge-text');
+    if (badge) {
+      badge.textContent = lang === 'en' ? 'ONLINE PSYCHOTHERAPY •' : 'PSICOTERAPIA ONLINE •';
+    }
+  };
+
+  updateAbout(getLang());
+  window.addEventListener('langchange', (e) => updateAbout((e as CustomEvent).detail));
+</script>

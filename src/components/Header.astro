@@ -1,0 +1,206 @@
+---
+// Header with navbar + language switcher (client-side, instant)
+import '../styles/header.css';
+---
+<header id="site-header">
+  <div class="container header-inner">
+    <!-- Logo / Name -->
+    <a href="#home" class="logo" aria-label="Romina Méndez — Inicio">
+      <span class="logo-name">Romina Méndez</span>
+      <span class="logo-tagline" id="header-tagline">Psicoterapia Online</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-desktop" aria-label="Navegación principal">
+      <a href="#home"     class="nav-link" id="nav-home"     data-section="home">Inicio</a>
+      <a href="#about"    class="nav-link" id="nav-about"    data-section="about">Sobre mí</a>
+      <a href="#services" class="nav-link" id="nav-services" data-section="services">Servicios</a>
+      <a href="#contact"  class="nav-link" id="nav-contact"  data-section="contact">Contacto</a>
+    </nav>
+
+    <!-- Right side: lang switcher + CTA -->
+    <div class="header-actions">
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="lang-switcher" aria-label="Cambiar idioma">
+        <button class="lang-btn active" data-lang="es" id="lang-es">ES</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="en" id="lang-en">EN</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="it" id="lang-it">IT</button>
+      </div>
+
+      <!-- WhatsApp CTA -->
+      <a
+        href="https://wa.me/541126629328"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary header-cta"
+        id="header-cta"
+        aria-label="Contactar por WhatsApp"
+      >
+        Contactar
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Menú móvil">
+    <a href="#home"     class="mobile-link" id="m-nav-home"     data-section="home">Inicio</a>
+    <a href="#about"    class="mobile-link" id="m-nav-about"    data-section="about">Sobre mí</a>
+    <a href="#services" class="mobile-link" id="m-nav-services" data-section="services">Servicios</a>
+    <a href="#contact"  class="mobile-link" id="m-nav-contact"  data-section="contact">Contacto</a>
+  </nav>
+  <a
+    href="https://wa.me/541126629328"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-whatsapp mobile-cta"
+    id="mobile-cta"
+  >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span id="mobile-cta-text">Contactar</span>
+  </a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" data-lang="es" id="m-lang-es">ES</button>
+    <span class="lang-sep" aria-hidden="true">|</span>
+    <button class="lang-btn" data-lang="en" id="m-lang-en">EN</button>
+    <span class="lang-sep" aria-hidden="true">|</span>
+    <button class="lang-btn" data-lang="it" id="m-lang-it">IT</button>
+  </div>
+</div>
+
+
+<script>
+  import { getLang, setLang, t, langs } from '../i18n/index';
+  import type { Lang } from '../i18n/index';
+
+  // ── State ────────────────────────────────────────────────
+  let currentLang: Lang = getLang();
+
+  // ── DOM references ───────────────────────────────────────
+  const header     = document.getElementById('site-header')!;
+  const hamburger  = document.getElementById('hamburger')!;
+  const mobileMenu = document.getElementById('mobile-menu')!;
+
+  // Nav labels by id
+  const navIds: Record<string, string> = {
+    'nav-home':      'home',
+    'nav-about':     'about',
+    'nav-services':  'services',
+    'nav-contact':   'contact',
+    'm-nav-home':    'home',
+    'm-nav-about':   'about',
+    'm-nav-services':'services',
+    'm-nav-contact': 'contact',
+  };
+
+  // ── Scroll: header background ────────────────────────────
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 30);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ── Mobile menu ──────────────────────────────────────────
+  const toggleMenu = (open: boolean) => {
+    hamburger.classList.toggle('open', open);
+    mobileMenu.classList.toggle('open', open);
+    mobileMenu.setAttribute('aria-hidden', String(!open));
+    hamburger.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('no-scroll', open);
+  };
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('open');
+    toggleMenu(!isOpen);
+  });
+
+  // Close mobile menu on nav link click
+  mobileMenu.querySelectorAll('.mobile-link').forEach((link) => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // ── Language switching ───────────────────────────────────
+  const applyLang = (lang: Lang) => {
+    currentLang = lang;
+    const tr = t(lang);
+
+    // html lang attr
+    document.documentElement.lang = lang;
+
+    // Nav labels (desktop + mobile)
+    const navMap: Record<string, keyof typeof tr.nav> = {
+      home:     'home',
+      about:    'about',
+      services: 'services',
+      contact:  'contact',
+    };
+
+    Object.entries(navIds).forEach(([id, section]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = tr.nav[navMap[section] as keyof typeof tr.nav];
+    });
+
+    // Header tagline & CTA
+    const tagline = document.getElementById('header-tagline');
+    if (tagline) tagline.textContent = tr.footer.tagline.split('·')[0].trim();
+    const headerCta = document.getElementById('header-cta');
+    if (headerCta) headerCta.textContent = tr.nav.cta;
+    const mobileCta = document.getElementById('mobile-cta-text');
+    if (mobileCta) mobileCta.textContent = tr.nav.cta;
+    const mobileCtaEl = document.getElementById('mobile-cta');
+    if (mobileCtaEl) mobileCtaEl.setAttribute('aria-label', tr.hero.cta_aria);
+
+    // Active lang buttons
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.classList.toggle('active', (btn as HTMLElement).dataset.lang === lang);
+    });
+
+    // Emit event so sections can update
+    window.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
+  };
+
+  // Bind all lang buttons (desktop + mobile)
+  document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang as Lang;
+      if (lang && lang !== currentLang) {
+        setLang(lang);
+        applyLang(lang);
+      }
+    });
+  });
+
+  // Init
+  applyLang(currentLang);
+
+  // ── Active nav on scroll ─────────────────────────────────
+  const sections = ['home', 'about', 'services', 'contact'];
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          document.querySelectorAll('.nav-link').forEach((link) => {
+            link.classList.toggle('active', (link as HTMLElement).dataset.section === id);
+          });
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -40% 0px' }
+  );
+  sections.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) navObserver.observe(el);
+  });
+</script>

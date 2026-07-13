@@ -1,0 +1,80 @@
+{
+  "lang": "it",
+  "nav": {
+    "home": "Home",
+    "about": "Chi sono",
+    "services": "Servizi",
+    "contact": "Contatto",
+    "cta": "Contattami"
+  },
+  "hero": {
+    "headline": "Di fronte a una perdita o a una migrazione, il mondo può sembrare più freddo e ostile.",
+    "subheadline": "Supporto emotivo e psicologico per accompagnarti nel recupero della calma e della resilienza.",
+    "intro": "Sono Romina Méndez, psicoterapeuta con oltre 10 anni di esperienza clinica. Offro psicoterapia nella tua lingua: spagnolo, inglese o italiano.",
+    "cta": "Contattami",
+    "cta_aria": "Contattami via WhatsApp"
+  },
+  "empathy": {
+    "text": "Il coraggio di affrontare una migrazione e la tristezza di riconoscere una perdita non implicano ignorare la propria vulnerabilità.",
+    "text2": "Essere forti non significa riuscire a fare tutto da soli né sentire meno le proprie emozioni.",
+    "about_link": "Chi sono →"
+  },
+  "about": {
+    "section_label": "Chi sono",
+    "title": "Il mio percorso",
+    "bio_1": "Vivo lontana dalla mia città natale dal 2006 e conosco in prima persona l'esperienza di sentire la mancanza di persone care, luoghi e modi di essere e stare nel mondo.",
+    "bio_2": "Migrare trasforma l'identità; c'è una perdita quotidiana, difficile da delimitare.",
+    "bio_3": "Attraverso la terapia di Accettazione e Impegno (ACT), ti accompagno nell'esplorazione della tua esperienza attuale di lutto e/o migrazione. Costruire una vita che senti significativa e preziosa è possibile al di là della sofferenza e del dolore.",
+    "bio_4": "Incorporo tecniche di terapia cognitivo-comportamentale e sistemica, che ti permettono di identificare schemi comportamentali disfunzionali. Si facilita così la presa di decisioni che generano cambiamenti.",
+    "credentials_title": "Il mio percorso professionale",
+    "credentials_subtitle": "Formazione rigorosa e specializzazione internazionale per offrirti un supporto clinico di alta qualità.",
+    "credentials": [
+      "Laurea in Psicologia | Università di Buenos Aires (UBA).",
+      "Specializzazione in Psicologia Clinica (Residenza) | Ministero della Salute della Provincia di Buenos Aires.",
+      "Residenza Avanzata in Gerontologia | Governo della Città di Buenos Aires.",
+      "Specialista Certificata in Psicologia Clinica | Ministero della Salute della Nazione, Argentina.",
+      "Specialista in Psicologia Sistemica | Scuola Sistemica Argentina (ESA).",
+      "Specialista in Terapie Contestuali e di Terza Generazione | Università di Almería, Spagna.",
+      "Master in Direzione e Gestione delle Risorse Umane | Università Internazionale de La Rioja (UNIR), Spagna."
+    ]
+  },
+  "services": {
+    "section_label": "Servizi",
+    "title": "Assistenza online, senza barriere geografiche, adattata al tuo fuso orario.",
+    "subtitle": "Disponibile in italiano, spagnolo e inglese.",
+    "individual_title": "Terapia Individuale",
+    "individual_desc": "Inizia a trasformare il tuo rapporto con il dolore e a ritrovare un senso di valore nella tua vita.",
+    "individual_duration": "Videochiamata di 50 minuti. Settimanale e/o quindicinale.",
+    "individual_price": "55 USD",
+    "couple_title": "Terapia di Coppia",
+    "couple_desc": "Ricostruisci il legame nei momenti di cambiamento, dalla compassione e dalla reciprocit\u00e0.",
+    "couple_duration": "Videochiamata di 60 minuti. Settimanale e/o quindicinale.",
+    "couple_price": "75 USD",
+    "workshop_title": "Workshop Area Lavorativa",
+    "workshop_desc_leaders": "Leader: Facilita il benessere lavorativo se guidi un team, con uno spazio per comprendere meglio le emozioni e la gestione dello stress lavorativo.",
+    "workshop_desc_professionals": "Professionisti: Se cerchi un cambiamento professionale, acquisisci nuove competenze nella ricerca di lavoro tramite LinkedIn.",
+    "workshop_duration": "Videochiamata di gruppo di 90 minuti.",
+    "workshop_price": "25 USD a persona",
+    "duration_label": "Durata",
+    "price_label": "Tariffa"
+  },
+  "contact": {
+    "section_label": "Contatto",
+    "title": "Parliamo",
+    "subtitle": "Disponibile dal luned\u00ec al venerd\u00ec, dalle 9 alle 20.",
+    "payments": "Pagamenti: Wise, PayPal e bonifico bancario.",
+    "whatsapp": "Contattami via WhatsApp",
+    "form_name": "Nome",
+    "form_email": "Indirizzo email",
+    "form_reason": "Motivo della consulenza",
+    "form_location": "Luogo di residenza",
+    "form_submit": "Invia messaggio",
+    "form_sending": "Invio in corso...",
+    "form_success": "Messaggio inviato! Ti risponder\u00f2 presto.",
+    "form_error": "Si \u00e8 verificato un errore. Per favore, contattami via WhatsApp."
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "tagline": "Psicoterapia online · Migrazione e Lutto"
+  }
+}

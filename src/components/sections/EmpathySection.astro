@@ -1,0 +1,55 @@
+---
+// Empathy Section — emotional bridge between hero and about
+import '../../styles/empathy.css';
+---
+<section class="empathy section-sm" aria-label="Mensaje de empatía">
+  <div class="container">
+    <div class="empathy-inner">
+      <div class="empathy-quote-mark" aria-hidden="true">"</div>
+
+      <div class="empathy-content" data-reveal>
+        <p class="empathy-text text-headline" id="empathy-text-1">
+          La valentía de atravesar una migración y la tristeza de reconocer una pérdida no implican pasar por alto la propia vulnerabilidad.
+        </p>
+        <p class="empathy-text-2 text-body-lg" id="empathy-text-2">
+          Ser fuerte no es poder con todo ni sentir menos tus emociones.
+        </p>
+        <div class="empathy-cta" data-reveal data-delay="200">
+          <a href="#about" class="btn btn-ghost" id="empathy-link">
+            <span id="empathy-link-text">Sobre mí →</span>
+          </a>
+          <div class="empathy-divider" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="empathy-deco" aria-hidden="true" data-reveal="right" data-delay="300">
+        <div class="deco-line"></div>
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="23" stroke="var(--color-accent)" stroke-width="0.75" stroke-dasharray="4 4"/>
+          <circle cx="24" cy="24" r="4" fill="var(--color-accent)" fill-opacity="0.4"/>
+        </svg>
+        <div class="deco-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+  import { getLang, t } from '../../i18n/index';
+  import type { Lang } from '../../i18n/index';
+
+  const updateEmpathy = (lang: Lang) => {
+    const tr = t(lang);
+    const el1  = document.getElementById('empathy-text-1');
+    const el2  = document.getElementById('empathy-text-2');
+    const link = document.getElementById('empathy-link-text');
+    if (el1)  el1.textContent  = tr.empathy.text;
+    if (el2)  el2.textContent  = tr.empathy.text2;
+    if (link) link.textContent = tr.empathy.about_link;
+  };
+
+  updateEmpathy(getLang());
+  window.addEventListener('langchange', (e) => updateEmpathy((e as CustomEvent).detail));
+</script>
