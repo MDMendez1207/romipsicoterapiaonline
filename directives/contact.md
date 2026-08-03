@@ -1,6 +1,7 @@
 ## Información necesaria
 - Debe tener un formulario de contacto funcional
 - Debe tener un botón para contactar por whatsapp
+- El número de whatsapp es: +5491126629328
 
 ## Contacto 
 
