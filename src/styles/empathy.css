@@ -14,7 +14,9 @@
 }
 @media (max-width: 768px) {
   .empathy-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .empathy-deco  { display: none; }
+  /* !important overrides the data-reveal animation that re-applies opacity/transform */
+  .empathy-deco  { display: none !important; }
+  .empathy-cta   { display: none !important; }
 }
 .empathy-quote-mark {
   position: absolute;

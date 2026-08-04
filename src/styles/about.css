@@ -10,9 +10,39 @@
   gap: 5rem;
   align-items: start;
 }
+
+/* ── Tablet ──────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .about-image-col {
+    /* Prevent the badge from bleeding off screen */
+    padding-right: 0;
+  }
+  .about-image-wrap {
+    max-width: 360px;
+    margin-inline: auto;
+  }
 }
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .about-header {
+    margin-bottom: 2.5rem;
+  }
+  .about-inner {
+    gap: 2rem;
+  }
+  .about-image-wrap {
+    /* Full-width on small screens, constrained to avoid overflow */
+    max-width: 100%;
+    /* Add right padding so the badge doesn't bleed out */
+    padding-right: 1rem;
+  }
+}
+
 .about-image-col {
   position: relative;
 }

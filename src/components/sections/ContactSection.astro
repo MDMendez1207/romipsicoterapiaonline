@@ -1,5 +1,6 @@
 ---
 // Contact Section — form + WhatsApp CTA + hours + payments
+// @ts-ignore
 import '../../styles/contact.css';
 ---
 <section id="contact" class="contact section" aria-label="Contacto">
@@ -177,6 +178,11 @@ import '../../styles/contact.css';
       const btn  = document.getElementById('form-submit-btn') as HTMLButtonElement | null;
       const txt  = document.getElementById('form-submit-text');
       const fb   = document.getElementById('form-feedback');
+
+      // Guard: do nothing if required fields are empty or invalid
+      const nameVal  = (document.getElementById('form-name')  as HTMLInputElement)?.value.trim();
+      const emailVal = (document.getElementById('form-email') as HTMLInputElement);
+      if (!nameVal || !emailVal?.value.trim() || !emailVal.checkValidity()) return;
 
       if (btn)  btn.disabled = true;
       if (txt)  txt.textContent = tr.contact.form_sending;
