@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'Romina Méndez · Psicoterapia Online · Migración y Duelos',
-  description = 'Psicoterapeuta con más de 10 años de experiencia. Acompañamiento en migración, duelos y bienestar emocional en español, inglés e italiano.',
+  description = 'Psicoterapeuta con más de 10 años de experiencia. Acompañamiento en migración, duelos y bienestar emocional. Sesiones online en español, inglés e italiano.',
 } = Astro.props;
 ---
 <!doctype html>
@@ -20,8 +20,16 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content="psicoterapia online, psicóloga online, terapia migración, duelo migratorio, terapia en español, salud mental inmigrantes, ACT terapia, psicóloga argentina, terapia individual, terapia de pareja online, online psychotherapy, online psychologist, migration therapy, grief therapy, therapy in English, mental health immigrants, ACT therapy, expat therapy, individual therapy, couples therapy online, psicoterapia online, psicologa online, terapia migrazione, terapia del lutto, terapia in italiano, salute mentale immigrati, terapia per expat, terapia individuale, terapia di coppia online" />
     <meta name="author" content="Romina Méndez" />
     <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="sPALgcvDpFDzT3uxD2uzZE6QrQM7TsoCO1EdnxlBuT4" />
+
+    <!-- hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="es" href="https://rominamenendez.com/" />
+    <link rel="alternate" hreflang="en" href="https://rominamenendez.com/" />
+    <link rel="alternate" hreflang="it" href="https://rominamenendez.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://rominamenendez.com/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -30,6 +38,8 @@ const {
     <meta property="og:locale" content="es_AR" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:url" content="https://rominamenendez.com/" />
+    <meta property="og:site_name" content="Romina Méndez Psicoterapia" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,9 +57,12 @@ const {
         "telephone": "+5491126629328",
         "availableLanguage": ["Spanish", "English", "Italian"],
         "serviceType": "Psychotherapy",
-        "areaServed": "Online"
+        "areaServed": "Online",
+        "inLanguage": ["es", "en", "it"]
       }
     </script>
+
+
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
